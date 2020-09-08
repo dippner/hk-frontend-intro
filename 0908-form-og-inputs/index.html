@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skjemaer i HTML</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <section class="signup-section">
+    <div class="signup-container">
+      <h1>Sign up!</h1>
+      <form action="kvittering.html">
+        <div class="form-group">
+          <label for="navn">Skriv inn navn her</label>
+          <input type="text" id="navn" name="fulltnavn" placeholder="Ditt navn her" required>
+        </div>
+        <div class="form-group">
+          <label for="epost">E-post</label>
+          <input type="email" id="epost" name="epostadresse" placeholder="Din e-post" required>
+        </div>
+        <div class="form-group">
+          <label for="passord">Ditt foretrukne passord</label>
+          <input type="password" id="passord" name="passord" required>
+        </div>
+        <strong>Velg abonnement</strong>
+        <div class="form-group">
+          <input type="radio" id="sub_basic" name="abonnement" value="sub_basic" required>
+          <label for="sub_basic">Basic</label>
+          <input type="radio" id="sub_premium" name="abonnement" value="sub_premium" required checked>
+          <label for="sub_premium">Premium</label>
+        </div>
+        <button class="btn-submit" type="submit">Bli med!</button>
+      </form>
+    </div>
+
+  </section>
+</body>
+</html>

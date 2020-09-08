@@ -1,0 +1,88 @@
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  font-size: 1.1rem;
+}
+
+.signup-section {
+  background-color: #888;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.signup-container {
+  background-color: aliceblue;
+  max-width: 600px;
+  padding: 2em;
+  border-radius: 10px;
+}
+
+.form-group {
+  margin-top: 10px;
+}
+
+input[type=text],
+input[type=password],
+input[type=email] {
+  width: 100%;
+  padding: 10px;
+  margin-top: 6px;
+  margin-bottom: 10px;
+  border: 1px solid black;
+  border-radius: 5px;
+  font-size: 1.1rem;
+}
+
+/*
+  Hvis vi velger å gjemme selve radio-knappen, er det lurt å ikke bruke display: none,
+  for da blir den utilgjengelig for brukere som bare bruker keyboardet.
+  I stedet gjør vi den usynlig, men beholder den tilgjengelig.
+*/
+input[type=radio] {
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  position: absolute;
+}
+
+/*
+  + i css betyr elementet som kommer direkte etter det foregående elementet i html-en.
+  I dette tilfellet ønsker vi å velge labelen som er direkte etter radioknappen vår.
+*/
+input[type=radio] + label {
+  background-color: white;
+  padding: 0.5em 1em;
+  border: 1px solid black;
+  border-radius: 5px;
+  display: inline-block;
+}
+
+/*
+  For radioknapper og checkbox-er kan vi bruke :checked for å style hvordan ting ser ut når de er merket av.
+  Her ønsker vi å angi css for labeler som er direkte etter en avmerket radioknapp.
+*/
+input[type=radio]:checked + label {
+  background-color: black;
+  color: white;
+}
+
+.btn-submit {
+  padding: 0.5em 1em;
+  border: 1px solid black;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  float: right;
+}
+
+/*
+  Stiler for når radioknappene har focus (f.eks. hvis man tab-er seg gjennom skjemaet)
+  Inputs får en default :focus-stil av nettleseren, men label gjør ikke det.
+*/
+input[type=radio]:focus + label {
+  font-style: italic;
+}
