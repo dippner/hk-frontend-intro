@@ -1,0 +1,21 @@
+* { box-sizing: border-box; }
+
+#grid {
+  display: grid;
+  grid-template-columns: repeat(16, 30px);
+  grid-auto-rows: 30px;
+}
+
+.dot {
+  background-color: purple;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dot div {
+  height: 80%;
+  width: 80%;
+  background-color: pink;
+  border-radius: 50%;
+}
